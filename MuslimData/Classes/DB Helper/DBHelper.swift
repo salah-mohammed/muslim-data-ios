@@ -155,7 +155,27 @@ class DBHelper {
             callback(nil, "Error: \(error.localizedDescription)")
         }
     }
-
+    func azkarItems(language: Language, callback: @escaping ([AzkarItem]?, String?) -> Void) {
+        do {
+            try dbPool?.read { dbConnect in
+                let result = try AzkarItem.fetchAll(dbConnect, sql: """
+                SELECT org._id, org.chapter_id, org.item, tr.item_translation, rtr.reference
+                FROM azkar_items as org
+                INNER JOIN azkar_items_translations as tr on tr.item_id = org._id and tr.language = '\(language)'
+                INNER JOIN azkar_references as ref on ref.item_id = org._id
+                INNER JOIN azkar_references_translations as rtr on rtr.reference_id = ref._id
+                and rtr.language = '\(language)'
+                """)
+                guard result.count > 0 else {
+                    callback(nil, "No row found")
+                    return
+                }
+                callback(result, nil)
+            }
+        } catch {
+            callback(nil, "Error: \(error.localizedDescription)")
+        }
+    }
     // MARK: - Private Methods
 
     /// Format date to "MM-dd" pattern which will be used to get prayers fro this date in the prayer database.

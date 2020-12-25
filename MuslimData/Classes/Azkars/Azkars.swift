@@ -63,4 +63,15 @@ public class Azkars {
             callback(items, nil)
         }
     }
+    public static func azkarItems(language: Language,
+                                  callback: @escaping ([AzkarItem]?, String?) -> Void) {
+        DBHelper.shared.azkarItems(language: language) { items, error in
+            guard error == nil else {
+                callback(nil, error)
+                return
+            }
+
+            callback(items, nil)
+        }
+    }
 }
