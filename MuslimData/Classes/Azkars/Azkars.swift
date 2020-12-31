@@ -9,7 +9,20 @@ import Foundation
 
 public class Azkars {
     // MARK: - Public Methods
+    
+    public static func arbawnNawawia(callback: @escaping ([ArbawnNawawia]?, String?) -> Void) {
+        DBHelper.shared.arbawnNawawia { items, error in
+            guard error == nil else {
+                callback(nil, error)
+                return
+            }
 
+            callback(items, nil)
+        }
+    }
+    
+    
+    
     /// Get list of azkar categories which is localized by given language.
     ///
     /// - Parameters:

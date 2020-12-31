@@ -28,7 +28,24 @@ class DBHelper {
     }
 
     // MARK: - Public Methods
-
+    
+    func arbawnNawawia(callback: @escaping ([ArbawnNawawia]?, String?) -> Void) {
+        do {
+            try dbPool?.read { dbConnect in
+                let result = try ArbawnNawawia.fetchAll(dbConnect, sql: """
+                SELECT * FROM ahadeeth
+                """)
+                guard result.count > 0 else {
+                    callback(nil, "No row found")
+                    return
+                }
+                callback(result, nil)
+            }
+        } catch {
+            callback(nil, "Error: \(error.localizedDescription)")
+        }
+    }
+    
     func prayerTimes(countryCode: String, city: String, date: Date, callback: @escaping (Row?, String?) -> Void) {
         do {
             try dbPool?.read { dbConnect in
