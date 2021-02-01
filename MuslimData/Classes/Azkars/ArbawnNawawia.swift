@@ -16,8 +16,8 @@ public struct ArbawnNawawia: FetchableRecord {
     public let hadeeth: String
     public let title: String
     public let reference: String
-    public let referenceWithoutForming: String
     public let titleWithoutForming: String
+    public let referenceWithoutForming: String
     
     /// get columns from db.
     enum Columns {

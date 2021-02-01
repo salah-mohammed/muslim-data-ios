@@ -278,12 +278,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4HFFW4423Q;
+						DevelopmentTeam = 8C7RSZ7C3V;
 						LastSwiftMigration = 1020;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4HFFW4423Q;
+						DevelopmentTeam = 8C7RSZ7C3V;
 						LastSwiftMigration = 1020;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -589,7 +589,7 @@
 			baseConfigurationReference = 1FA7CF45010583A8DE450B74 /* Pods-MuslimData_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HFFW4423Q;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = MuslimData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -605,7 +605,7 @@
 			baseConfigurationReference = B03E607FABE06466BB50FF62 /* Pods-MuslimData_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HFFW4423Q;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				INFOPLIST_FILE = MuslimData/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -620,7 +620,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74AFAA0290358FD0025B4CFB /* Pods-MuslimData_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4HFFW4423Q;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -642,7 +642,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5665FE91640402C3D36C56F2 /* Pods-MuslimData_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 4HFFW4423Q;
+				DEVELOPMENT_TEAM = 8C7RSZ7C3V;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
