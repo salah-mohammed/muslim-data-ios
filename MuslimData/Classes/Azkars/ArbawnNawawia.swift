@@ -25,19 +25,19 @@ public struct ArbawnNawawia: FetchableRecord {
         static let hadeeth = Column("hadeeth")
         static let title = Column("title")
         static let reference = Column("reference")
-        static let titleWithoutForming = Column("titleWithoutForming")
+        static let hadeethWithoutForming = Column("hadeethWithoutForming")
         static let referenceWithoutForming = Column("referenceWithoutForming")
 
     }
 
     // MARK: - Constructors
 
-    public init(id: Int, hadeeth: String,title:String,reference:String,titleWithoutForming:String,referenceWithoutForming:String) {
+    public init(id: Int, hadeeth: String,title:String,reference:String,hadeethWithoutForming:String,referenceWithoutForming:String) {
         self.id = id
         self.hadeeth = hadeeth
         self.title = title
         self.reference = reference
-        self.titleWithoutForming=titleWithoutForming
+        self.hadeethWithoutForming=hadeethWithoutForming
         self.referenceWithoutForming=referenceWithoutForming
     }
 
@@ -46,7 +46,7 @@ public struct ArbawnNawawia: FetchableRecord {
         hadeeth = row[Columns.hadeeth]
         title = row[Columns.title]
         reference = row[Columns.reference]
-        titleWithoutForming = row[Columns.titleWithoutForming]
+        hadeethWithoutForming = row[Columns.hadeethWithoutForming]
         referenceWithoutForming = row[Columns.referenceWithoutForming]
 
     }
