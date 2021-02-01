@@ -16,7 +16,7 @@ public struct ArbawnNawawia: FetchableRecord {
     public let hadeeth: String
     public let title: String
     public let reference: String
-    public let titleWithoutForming: String
+    public let hadeethWithoutForming: String
     public let referenceWithoutForming: String
     
     /// get columns from db.
